@@ -4,6 +4,22 @@ int main() {
   printf("Please enter three integers: ");
   scanf("%d%d%d", &a, &b, &c);
   printf("Before: %d %d %d\n", a, b, c);
+  //把Ａ換成最小，再把Ｂ換成次小，Ｃ就是最小
+  if (b < a) {
+    t = a;
+    a = b;
+    b = t;
+  }
+  if (c < a) {
+    t = a;
+    a = c;
+    c = t;
+  }
+  if (c < b) {
+    t = b;
+    b = c;
+    c = t;
+  }
   //從右換到左
   if (c < b) {
     t = c;
