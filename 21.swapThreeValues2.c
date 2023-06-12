@@ -4,7 +4,23 @@ int main() {
   printf("Please enter three integers: ");
   scanf("%d%d%d", &a, &b, &c);
   printf("Before: %d %d %d\n", a, b, c);
-  //把Ａ換成最小，再把Ｂ換成次小，Ｃ就是最小
+  //把Ｃ換成最大，再把Ｂ換成次大，Ｃ就是最大
+  if (c < a) {
+    t = c;
+    c = a;
+    a = t;
+  }
+  if (c < b) {
+    t = c;
+    c = b;
+    b = t;
+  }
+  if (b < a) {
+    t = b;
+    b = a;
+    a = t;
+  }
+  //把Ａ換成最小，再把Ｂ換成次小，Ａ就是最小
   if (b < a) {
     t = a;
     a = b;
