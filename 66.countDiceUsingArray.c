@@ -13,28 +13,10 @@ int main() {
   for (int i = 1; i <= N; ++i) {
     int nowDice;
     nowDice = rand() % 6 + 1;
-    switch (nowDice) {
-    case 1:
-      ++counter[0];
-      break;
-    case 2:
-      ++counter[1];
-      break;
-    case 3:
-      ++counter[2];
-      break;
-    case 4:
-      ++counter[3];
-      break;
-    case 5:
-      ++counter[4];
-      break;
-    case 6:
-      ++counter[5];
-    }
+    counter[nowDice - 1]++;
   }
-  for (int i = 0; i < 6; ++i) {
-    printf("%d: %d\n", i + 1, counter[i]);
+  for (int j = 1; j <= 6; ++j) {
+    printf("%d: %d\n", j, counter[j - 1]);
   }
   return 0;
 }
