@@ -4,7 +4,6 @@ int main() {
   int numbers[10];
   int i;
   int findNumber;
-
   printf("Please enter the ten integer:\n");
   for (i = 1; i <= 10; i++) {
     scanf("%d", &numbers[i - 1]);
