@@ -19,6 +19,7 @@ void reassign(int v[]) {
   int i = 0;
   // v+5 == &v[0]+5 。隱性轉型。
   for (n = v; n != v + 5; n++) {
+    // *n == v[0];
     *n = i;
     i++;
   }
